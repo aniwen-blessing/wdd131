@@ -1,55 +1,112 @@
+/* ===== Reset ===== */
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-h1 {
-	text-align: center;
-	background-color: rgb(0 110 182 / 1);
-	padding: 0.5rem;
-	color: #fff;
+/* ===== Header ===== */
+.header {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    padding: 25px 30px;
 }
 
-p {
-	text-align: center;
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-nav {
-	margin: 0 auto 2rem;
-	max-width: 90vw;
+/* ===== Navigation ===== */
+.navbar {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
 }
 
-main {
-	margin: 1rem;
-	border: 1px solid rgb(0 0 0 / .2);
-	padding: 1rem;
-	background-color: #eee;
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
 }
 
-.navigation {
-	list-style: none;
-	display: flex;
-	flex-wrap: wrap;
-	background-color: #333;
-	align-items: center;
-}
-.navigation li {
-	flex: 1 1 auto; /* What is the difference between auto and 100% flex-basis? - turn on link borders to view */
-}
-.navigation a {
-	font-weight: 700;
-	display: block;
-	color: #eee;
-	padding: 0.75rem;
-	text-decoration: none;
-	text-align: center;
+.nav-link:hover {
+    text-decoration: underline;
 }
 
-.navigation a:hover {
-	text-decoration: underline;
-	text-decoration-color: yellow;
+/* ===== Content Wrapper (Flexbox) ===== */
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+    background-color: #d3d3d3;
+    flex: 3;
+    padding: 20px;
+}
+
+.main-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.main-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.main-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Aside Content ===== */
+.aside-content {
+    background-color: #ffffff;
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #cccccc;
+}
+
+.aside-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.aside-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.aside-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer p {
+    font-size: 1.3rem;
+    font-weight: bold;
 }
