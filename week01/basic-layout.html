@@ -1,45 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML and CSS Layout</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <title>WDD 131 - Dynamic Web Fundamentals</title>
 </head>
+
 <body>
-
-    <header class="header">
-        <h1>Header content</h1>
-    </header>
-
-    <nav class="navbar">
-        
-        <a href="#" class="nav-link">Home</a>
-        <a href="#" class="nav-link">Projects</a>
-        <a href="#" class="nav-link">Services</a>
-        <a href="#" class="nav-link">Contact Us</a>
-
-
+  <header>
+    <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    <nav>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">BYU Canvas</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Scripture</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Final Project</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <div class="content-wrapper">
-        <main class="main-content">
-            <h2>Main Content</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A veritatis illum excepturi culpa itaque, nemo sapiente amet eligendi blanditiis. Ab maiores ipsum error, repellat natus consequuntur fugit voluptatum dolorem quas.</p>
-            <img src="https://via.placeholder.com/250x200" alt="Placeholder aside image">
-        </main>
+  <main>
+    <h1>Your Name</h1>
 
-        <aside class="aside-content">
-            <h2>Aside content</h2>
-            <p>Duisre eu fugiat nulla pariatur.</p>
-            <img src="https://via.placeholder.com/250x200" alt="Placeholder aside image">
-        </aside>
-    </div>
+    <section class="card about-me">
+      <h2>About Me</h2>
+      <div class="about-me-content">
+        <p>Your about me content goes here. Tell people about yourself, your background, and what you do.</p>
+        <img src="images/profile.jpg" alt="Your Name" class="profile-image">
+      </div>
+    </section>
 
-    <footer class="footer">
-        <p>Footer Content</p>
+    <section class="card location">
+      <h3>Your Location</h3>
+      <div class="flag-section">
+        <figure>
+          <img src="images/flag.png" alt="Location Flag" class="flag-image">
+          <figcaption><em>Description of flag</em></figcaption>
+        </figure>
+        <p>Information about your location, culture, and interesting facts goes here.</p>
+      </div>
+    </section>
 
-    </footer>
+    <aside class="card web-resources">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener noreferrer">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3 Schools</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <footer>
+    <p>© <span id="currentyear"></span> ⫴ Your Name ⫴ Your Location</p>
+    <p id="lastmodified">Last Modified: <span id="lastmodifieddate"></span></p>
+  </footer>
+</body>
+</html>
 
 
     
