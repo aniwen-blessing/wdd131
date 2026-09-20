@@ -1,0 +1,162 @@
+/* ===================================
+   TEMPLE ALBUM - MOBILE FIRST CSS
+   =================================== */
+
+:root {
+    --primary-color: #1a3a52;
+    --secondary-color: #2c5f7f;
+    --accent-color: #d4af37;
+    --text-color: #333333;
+    --light-text: #ffffff;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* --- Header & Nav --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content h1 { color: var(--light-text); font-size: 1.5rem; }
+
+#menuButton {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+}
+
+#navMenu ul {
+    list-style: none;
+    display: none; /* Hidden on mobile by default */
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#navMenu.open ul { display: flex; }
+
+#navMenu li { border-bottom: 1px solid var(--secondary-color); }
+
+#navMenu a {
+    display: block;
+    color: var(--light-text);
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+#navMenu a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* --- Main Content --- */
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    flex: 1;
+}
+
+main > h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+/* ===================================
+   GALLERY GRID - UNIFORM ROWS
+   =================================== */
+.gallery-grid {
+    display: grid;
+    /* MOBILE: 2 small columns per row */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+    justify-items: center;
+}
+
+figure {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    width: 100%;
+    /* Force uniform size */
+    max-width: 280px; 
+}
+
+figure img {
+    width: 100%;
+    /* FIXED HEIGHT ensures all images are same size regardless of original */
+    height: 180px; 
+    object-fit: cover; /* Crops image to fill box without stretching */
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    padding: 0.75rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    border-top: 2px solid var(--accent-color);
+    /* Fixed height for captions keeps rows aligned even if text wraps */
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}

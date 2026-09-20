@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="A responsive photo album of various temples.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files: Mobile First (Base) then Large Screen Overrides -->
+    <link rel="stylesheet" href="styles/temple.css">
+    <link rel="stylesheet" href="styles/temple-large.css">
+
+    <!-- JavaScript: Deferred loading -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Temple Album</h1>
+            
+            <!-- Hamburger Button (Visible only on mobile via CSS) -->
+            <button id="menuButton" aria-label="Toggle Navigation Menu">
+                &#9776; <!-- Hamburger Symbol -->
+            </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <h1>Gallery of Temples</h1>
+    
+    <div class="gallery-grid">
+        <!-- Temple 1 -->
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtqfNunMsCPsVYQUaDBmuLL_NHwZe-QxUG5JKcusN0XQ&s" alt="Abidjan Ivory Coast Temple" loading="lazy">
+            <figcaption>Abidjan Ivory Coast Temple</figcaption>
+        </figure>
+        
+        <!-- Temple 2 -->
+        <figure>
+            <img src="data:image/jpeg;base64,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" alt="Aba Nigeria Temple" loading="lazy">
+            <figcaption>Aba Nigeria Temple</figcaption>
+        </figure>
+        
+        <!-- Temple 3 -->
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsqVC79imy3zw9LhBTSYd7iA-GYIZEl0rdYxzo8JePrQ&s" alt="Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana Temple</figcaption>
+        </figure>
+        
+        <!-- Temple 4 -->
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbXX_A09XGpj2kr5Y9clE_McKnIeOp6zcWb-zP1LWOjQ&s" alt="Adelaide Australia Temple" loading="lazy">
+            <figcaption>Adelaide Australia Temple</figcaption>
+        </figure>
+        
+        <!-- Temple 5 -->
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8HlhVk5CxRA-2D8-WjEAP1PETiezoI_w056Hk3wC8Yg&s=10" alt="Alabang Philippines Temple" loading="lazy">
+            <figcaption>Alabang Philippines Temple</figcaption>
+        </figure>
+        
+        <!-- Temple 6 -->
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWncQTH8IRTYUKTie2R9UonPuAgzT1VtQo64vZcxoM2w&s" alt="Albuquerque New Mexico Temple" loading="lazy">
+            <figcaption>Albuquerque New Mexico Temple</figcaption>
+        </figure>
+        
+        <!-- Temple 7 -->
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfE48t3Vc7eqFYzniDye8oFMT_HsTwKeLXSA9_hlNSKw&s=10" alt="Anchorage Alaska Temple" loading="lazy">
+            <figcaption>Anchorage Alaska Temple</figcaption>
+        </figure>
+        
+        <!-- Temple 8 -->
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujPbut2pGx2qFoAtqxqv4YfBHGNwEoZLcsz0oyIc3Hg&s=10" alt="Antananarivo Madagascar Temple" loading="lazy">
+            <figcaption>Antananarivo Madagascar Temple</figcaption>
+        </figure>
+        
+        <!-- Temple 9 -->
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg9as7gxi4uYE8Xc6_lQN3QEkuI9OAFu-4A0zN2HMe7g&s=10" alt="Apia Samoa Temple" loading="lazy">
+            <figcaption>Apia Samoa Temple</figcaption>
+        </figure>
+    </div>
+</main>
+
+    <footer>
+    <p>&copy; <span id="2026"></span> Aniwen Blessing - Nigeria</p>
+    <!-- This span MUST have id="lastModified" -->
+    <p>Last Modified:9/20/2026 9.06 <span id="lastModified"></span></p>
+</footer>
+
+</body>
+</html>

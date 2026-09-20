@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 -Dynamic Web Fundamental</title>
+    <title>WDD 131 -Dynamic Web Fundamental - Aniwen Blessing</title>
+    <meta name="description" content="WDD131 - Dynamic Web Fundamentals course landing page for Aniwen Blessing. Features dynamic dates responsive design, and web developent projects.">
+    <meta name="author" content="Aniwen Blessing">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style/styles.css">
+
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
 
     <header class="header">
-        <h1>WDD 131 -Dynamic Web Fundamental</h1>
+        <span id="course-title">WDD 131 - Dynamic Web Fundamental</span>
 
-        <nav class="navbar">
-        
-        <a href="#" class="nav-link">LinkeIn Profile</a>
-        <a href="#" class="nav-link">Canvas</a>
-        <a href="#" class="nav-link">Scripture</a>
-        <a href="#" class="nav-link">Final project</a>
-
-
+      <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
         </nav>
     </header>
+
     <main>
         <h1>Aniwen Blessing</h1>
 
@@ -79,7 +88,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Aniwen Blessing | Nigeria</p>
+        <p>
+            &copy; <span id="2026"></span> • Aniwen Blessing • Nigeria
+        </p>
+        <p id="lastmodified"></p>
     </footer>
 </body>
 </html>
