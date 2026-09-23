@@ -1,0 +1,47 @@
+/* ============================================
+   TEMPLE ALBUM — Larger View Styles
+   Breakpoint: 768px and up
+   ============================================ */
+
+@media screen and (min-width: 768px) {
+
+    /* --- Header Layout --- */
+    .header-content {
+        flex-wrap: nowrap;
+    }
+
+    .hamburger {
+        display: none;                   /* hide hamburger on large screens */
+    }
+
+    /* --- Navigation always visible, horizontal --- */
+    .main-nav {
+        display: block !important;       /* override JS toggle */
+        margin-top: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0;
+    }
+
+    .main-nav a {
+        padding: 0.5rem 1.25rem;
+    }
+
+    /* --- Gallery Grid (3 columns on larger screens) --- */
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /* --- Typography scaling --- */
+    main h1 {
+        font-size: 2.5rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
