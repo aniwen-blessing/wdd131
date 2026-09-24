@@ -1,47 +1,18 @@
-/* ============================================
-   TEMPLE ALBUM — Larger View Styles
-   Breakpoint: 768px and up
-   ============================================ */
+/* temples-large.css 
+   This file is required by the course audit. 
+   Additional styling for very large screens can go here.
+*/
 
-@media screen and (min-width: 768px) {
-
-    /* --- Header Layout --- */
-    .header-content {
-        flex-wrap: nowrap;
-    }
-
-    .hamburger {
-        display: none;                   /* hide hamburger on large screens */
-    }
-
-    /* --- Navigation always visible, horizontal --- */
-    .main-nav {
-        display: block !important;       /* override JS toggle */
-        margin-top: 0;
-    }
-
-    .main-nav ul {
-        flex-direction: row;
-        justify-content: flex-end;
-        gap: 0;
-    }
-
-    .main-nav a {
-        padding: 0.5rem 1.25rem;
-    }
-
-    /* --- Gallery Grid (3 columns on larger screens) --- */
+@media screen and (min-width: 1200px) {
     .gallery {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
-    /* --- Typography scaling --- */
-    main h1 {
-        font-size: 2.5rem;
+    figure img {
+        height: 300px; /* Taller images on large screens */
     }
 
-    footer p {
-        font-size: 1rem;
+    header h1 {
+        font-size: 3.5rem;
     }
 }

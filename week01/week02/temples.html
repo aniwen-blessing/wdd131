@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A photo album of LDS temples around the world.">
+    <meta name="description" content="A photo album showcasing beautiful LDS temples from around the world with various architectural styles and sizes.">
+    <meta name="author" content="Your Name">
     <title>Temple Album</title>
-
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- CSS: mobile-first order -->
+    
+    <!-- CSS Files - CORRECTED NAMES -->
     <link rel="stylesheet" href="styles/temple.css">
     <link rel="stylesheet" href="styles/temple-large.css">
-
-    <!-- JavaScript (deferred) -->
+    
+    <!-- JavaScript -->
     <script src="scripts/temples.js" defer></script>
 </head>
 <body>
-
     <header>
-        <div class="header-content">
-            <h1 class="site-title">Temple Album</h1>
-            <button class="hamburger" aria-label="Toggle navigation menu">&#9776;</button>
-        </div>
+        <h1>Temple Album</h1>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav class="main-nav">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -35,55 +37,52 @@
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <h1>Home</h1>
-
-        <div class="gallery">
+        <!-- ONLY ONE H1 in main - this should be removed or changed to h2 -->
+        <section id="home" class="gallery">
             <figure>
-                <img src="images/temple.jpg" alt="San Diego California Temple" loading="lazy">
-                <figcaption>San Diego California</figcaption>
+                <img src="images/temple1.jpg" alt="San Diego California Temple">
+                <figcaption>San Diego California Temple</figcaption>
             </figure>
             <figure>
-                <img src="images/temple.jpg" alt="San Diego California Temple" loading="lazy">
-                <figcaption>San Diego California</figcaption>
+                <img src="images/temple2.jpg" alt="Nauvoo Illinois Temple">
+                <figcaption>Nauvoo Illinois Temple</figcaption>
             </figure>
             <figure>
-                <img src="images/temple.jpg" alt="San Diego California Temple" loading="lazy">
-                <figcaption>San Diego California</figcaption>
+                <img src="images/temple3.jpg" alt="Salt Lake Temple">
+                <figcaption>Salt Lake Temple</figcaption>
             </figure>
             <figure>
-                <img src="images/temple.jpg" alt="San Diego California Temple" loading="lazy">
-                <figcaption>San Diego California</figcaption>
+                <img src="images/temple4.jpg" alt="Laie Hawaii Temple">
+                <figcaption>Laie Hawaii Temple</figcaption>
             </figure>
             <figure>
-                <img src="images/temple.jpg" alt="San Diego California Temple" loading="lazy">
-                <figcaption>San Diego California</figcaption>
+                <img src="images/temple5.jpg" alt="Cardston Alberta Temple">
+                <figcaption>Cardston Alberta Temple</figcaption>
             </figure>
             <figure>
-                <img src="images/temple.jpg" alt="San Diego California Temple" loading="lazy">
-                <figcaption>San Diego California</figcaption>
+                <img src="images/temple6.jpg" alt="Mesa Arizona Temple">
+                <figcaption>Mesa Arizona Temple</figcaption>
             </figure>
             <figure>
-                <img src="images/temple.jpg" alt="San Diego California Temple" loading="lazy">
-                <figcaption>San Diego California</figcaption>
+                <img src="images/temple7.jpg" alt="Idaho Falls Idaho Temple">
+                <figcaption>Idaho Falls Idaho Temple</figcaption>
             </figure>
             <figure>
-                <img src="images/temple.jpg" alt="San Diego California Temple" loading="lazy">
-                <figcaption>San Diego California</figcaption>
+                <img src="images/temple8.jpg" alt="Bern Switzerland Temple">
+                <figcaption>Bern Switzerland Temple</figcaption>
             </figure>
             <figure>
-                <img src="images/temple.jpg" alt="San Diego California Temple" loading="lazy">
-                <figcaption>San Diego California</figcaption>
-......
+                <img src="images/temple9.jpg" alt="London England Temple">
+                <figcaption>London England Temple</figcaption>
             </figure>
-        </div>
+        </section>
     </main>
-
+    
     <footer>
-        <p>&copy;<span id="current-year"></span> 🌸 Aniwen Blessing Sewuese 🌸</p>
-        <p>Last Modification: <span id="last-modified"></span></p>
-    </footer>
-
+    <p>&copy;<span id="2026"></span> &#127800; Aniwen Blessing &#127800; Madagascar</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+</footer>
 </body>
 </html>
