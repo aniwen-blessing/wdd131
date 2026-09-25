@@ -1,0 +1,180 @@
+/* =========================================
+   GLOBAL RESET & TYPOGRAPHY
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+h1, h2, h3, figcaption {
+    font-family: 'Playfair Display', serif;
+}
+
+/* =========================================
+   HEADER & NAVIGATION (FLEXBOX)
+   ========================================= */
+header {
+    background-color: #3a0066; /* Purple theme */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative; /* For positioning hamburger */
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+/* Hamburger Menu Button (Hidden on Desktop) */
+.hamburger {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 100;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Navigation List */
+.main-nav ul {
+    display: flex;           /* REQUIRED: Flexbox */
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* REQUIRED: Hover Effect */
+.main-nav a:hover,
+.main-nav a:focus {
+    color: #d8bfd8; /* Light purple highlight */
+    text-decoration: underline;
+}
+
+/* =========================================
+   MAIN CONTENT & GALLERY (CSS GRID)
+   ========================================= */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.gallery {
+    display: grid;           /* REQUIRED: CSS Grid */
+    /* Mobile First: 1 column */
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+}
+
+figure {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Lift effect on card hover */
+figure:hover {
+    transform: translateY(-5px);
+}
+
+figure img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;       /* Ensures images don't stretch */
+    display: block;
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: center;
+    color: #3a0066;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: #3a0066;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVENESS)
+   ========================================= */
+
+/* Tablet & Desktop (768px and up) */
+@media screen and (min-width: 768px) {
+    .gallery {
+        /* Switch to 3 columns */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .hamburger {
+        display: none; /* Ensure hidden on large screens */
+    }
+}
+
+/* Mobile Only (Less than 768px) */
+@media screen and (max-width: 767px) {
+    .hamburger {
+        display: block; /* Show hamburger */
+    }
+
+    .main-nav {
+        display: none; /* Hide nav by default on mobile */
+        width: 100%;
+        background-color: #3a0066;
+        padding-bottom: 1rem;
+    }
+
+    /* Class added by JS to show menu */
+    .main-nav.active {
+        display: block; 
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem;
+    }
+}
