@@ -1,17 +1,9 @@
-/**
- * Madagascar Travel Guide - JavaScript Functionality
- */
-
-// Weather data for Madagascar
 const weatherData = {
     temperature: 10,
     windSpeed: 5,
     unit: 'metric'
 };
 
-/**
- * Calculate wind chill factor
- */
 function calculateWindChill(temp, windSpeed, unit = 'metric') {
     if (unit === 'metric') {
         if (temp > 10 || windSpeed <= 4.8) {
@@ -26,17 +18,10 @@ function calculateWindChill(temp, windSpeed, unit = 'metric') {
     }
 }
 
-/**
- * Update wind chill display
- */
 function updateWindChill() {
     const windChillElement = document.getElementById('wind-chill');
-    const result = calculateWindChill(
-        weatherData.temperature,
-        weatherData.windSpeed,
-        weatherData.unit
-    );
-    
+    const result = calculateWindChill(weatherData.temperature, weatherData.windSpeed, weatherData.unit);
+
     if (result === 'N/A') {
         windChillElement.textContent = 'N/A';
     } else {
@@ -45,36 +30,25 @@ function updateWindChill() {
     }
 }
 
-/**
- * Update footer with current year and last modified date
- */
 function updateFooter() {
-    // Current year
-    const currentYearElement = document.getElementById('current-year');
-    currentYearElement.textContent = new Date().getFullYear();
-    
-    // Last modified date
-    const lastModifiedElement = document.getElementById('last-modified');
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
     const lastModified = new Date(document.lastModified);
-    const options = { 
-        year: 'numeric', 
-        month: '2-digit', 
+    const options = {
+        year: 'numeric',
+        month: '2-digit',
         day: '2-digit',
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
         hour12: false
     };
-    lastModifiedElement.textContent = lastModified.toLocaleDateString('en-US', options);
+    document.getElementById('last-modified').textContent = lastModified.toLocaleDateString('en-US', options);
 }
 
-/**
- * Initialize the page
- */
 function init() {
     updateWindChill();
     updateFooter();
-    console.log('Madagascar page initialized');
 }
 
 document.addEventListener('DOMContentLoaded', init);
