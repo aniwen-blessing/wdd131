@@ -1,0 +1,173 @@
+/* Global Reset and Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F7FAFC; /* Off-White Background */
+    color: #2D3748; /* Dark Gray Text */
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Headings Typography and Color */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #1A365D; /* Deep Blue */
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ED8936; /* Vibrant Orange Accent */
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+    color: #4A5568;
+}
+
+/* Sections */
+.plan-section {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.plan-section ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.plan-section li {
+    margin-bottom: 10px;
+}
+
+/* Color Schema Swatches */
+.color-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+    border: 1px solid #CBD5E0;
+}
+
+.color-swatch.primary { background-color: #1A365D; }
+.color-swatch.secondary { background-color: #ED8936; }
+.color-swatch.background { background-color: #F7FAFC; }
+.color-swatch.text { background-color: #2D3748; }
+
+/* Wireframe Styling */
+.wireframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.wireframe-view {
+    flex: 1;
+    min-width: 280px;
+}
+
+.wireframe {
+    border: 2px dashed #A0AEC0;
+    background-color: #EDF2F7;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #4A5568;
+    text-align: center;
+}
+
+.wireframe > div {
+    border: 1px solid #CBD5E0;
+    background-color: #FFFFFF;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Desktop Wireframe Specifics */
+.wireframe.desktop .wf-header-desktop,
+.wireframe.desktop .wf-hero-desktop,
+.wireframe.desktop .wf-footer-desktop {
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #CBD5E0;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.wireframe.desktop .wf-grid-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.wireframe.desktop .wf-box {
+    border: 1px solid #CBD5E0;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #1A365D; /* Deep Blue */
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .wireframe.desktop .wf-grid-desktop {
+        grid-template-columns: 1fr; /* Stack boxes on very small screens */
+    }
+}
