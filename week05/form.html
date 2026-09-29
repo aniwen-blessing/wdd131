@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review form for Digital Minds Coding Academy.">
+    <meta name="author" content="Aniwen Blessing">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    
+    <main>
+        <form method="get" action="review.html" id="reviewForm">
+            
+            <!-- Product Name -->
+            <label for="productName">Product Name</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Choose a Product ...</option>
+                <!-- Populated by JavaScript -->
+            </select>
+
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <div class="star-rating">
+                    <div class="star-option">
+                        <span class="stars">☆</span>
+                        <input type="radio" id="rate1" name="rating" value="1" required>
+                    </div>
+                    <div class="star-option">
+                        <span class="stars">☆☆</span>
+                        <input type="radio" id="rate2" name="rating" value="2" required>
+                    </div>
+                    <div class="star-option">
+                        <span class="stars">☆☆☆</span>
+                        <input type="radio" id="rate3" name="rating" value="3" required>
+                    </div>
+                    <div class="star-option">
+                        <span class="stars">☆☆☆☆</span>
+                        <input type="radio" id="rate4" name="rating" value="4" required>
+                    </div>
+                    <div class="star-option">
+                        <span class="stars">☆☆☆☆☆</span>
+                        <input type="radio" id="rate5" name="rating" value="5" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <label for="installDate">Date of Installation</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Which features did you find useful in the product?<br>
+                <em>(Check all that apply)</em></legend>
+                
+                <label for="feature1">
+                    <input type="checkbox" id="feature1" name="features" value="Durability">
+                    Durability
+                </label>
+                <label for="feature2">
+                    <input type="checkbox" id="feature2" name="features" value="Ease of Use">
+                    Ease of Use
+                </label>
+                <label for="feature3">
+                    <input type="checkbox" id="feature3" name="features" value="Performance">
+                    Performance
+                </label>
+                <label for="feature4">
+                    <input type="checkbox" id="feature4" name="features" value="Design">
+                    Design
+                </label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <label for="writtenReview">Written Review <span class="optional">(Optional)</span></label>
+            <textarea id="writtenReview" name="writtenReview" rows="5"></textarea>
+
+            <!-- User Name -->
+            <label for="userName">Your Name <span class="optional">(Optional)</span></label>
+            <input type="text" id="userName" name="userName">
+
+            <!-- Form Submission Button -->
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy;2026 🌸 Aniwen Blessing 🌸</p>
+        <p>Nigeria</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+</html>

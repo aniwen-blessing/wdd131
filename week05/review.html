@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmation page for product review submission.">
+    <meta name="author" content="Aniwen Blessing">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Review Submitted Successfully!</h1>
+    </header>
+    
+    <main>
+        <p>Thank you for your feedback. Here is a summary of your submission:</p>
+        
+        <div id="confirmationDetails">
+            <!-- Populated dynamically by JavaScript -->
+        </div>
+        
+        <!-- Inline styles removed and replaced with class="review-count" -->
+        <p class="review-count">
+            Total reviews submitted: <span id="reviewCount">0</span>
+        </p>
+        
+        <p><a href="form.html">Submit another review</a></p>
+    </main>
+
+    <footer>
+        <p>&copy;2026 🌸 Aniwen Blessing 🌸</p>
+        <p>Nigeria</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+</html>
