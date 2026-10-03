@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LDS Temple Album - Filter and explore temples of The Church of Jesus Christ of Latter-day Saints">
+    <meta name="description" content="LDS Temples - Filter and explore temples of The Church of Jesus Christ of Latter-day Saints">
     <meta name="author" content="Aniwen Blessing">
-    <title>LDS Temple Album</title>
-    
-    <!-- Updated path to styles folder -->
-    <link rel="stylesheet" href="styles/filtered-temples.css">
-    
-    <!-- Moved to head and added 'defer' attribute to fix the JS audit failure -->
-     <script src="scripts/filtered-temples.js" defer></script>
-
+    <title>Filtered Temples</title>
+    <!-- Ensure this matches your actual CSS file name -->
+    <link rel="stylesheet" href="wdd130/filtered-temples.css">
 </head>
 <body>
     <header>
-        <!-- Changed to include "Temple Album" to pass the header text check -->
-        <h1>LDS Temple Album</h1>
+        <h1>LDS Temples</h1>
         <nav>
             <ul>
+                <!-- Navigation links for filtering -->
                 <li><a href="#" id="home">Home</a></li>
                 <li><a href="#" id="old">Old</a></li>
                 <li><a href="#" id="new">New</a></li>
@@ -30,14 +25,18 @@
     </header>
 
     <main>
+        <!-- This container is empty; JavaScript will dynamically inject the temple cards here -->
         <div id="temples-container" class="temples-grid">
-            <!-- Temple cards will be dynamically inserted here -->
         </div>
     </main>
 
     <footer>
+        <!-- JavaScript will update the year and last modified date -->
         <p>&copy; <span id="current-year"></span> Aniwen Blessing. All rights reserved.</p>
         <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
+
+    <!-- Ensure this matches your actual JS file name -->
+    <script src="wdd130/filtered-temples.js"></script>
 </body>
 </html>
