@@ -5,7 +5,7 @@ const temples = [
         location: "Aba, Nigeria",
         dedicated: "2005, August, 7",
         area: 11500,
-        imageUrl: "aba-nigeria-temple.jpg"
+        imageUrl: "images/aba-nigeria-temple.jpg"
     },
     {
         name: "Manti Utah",
