@@ -1,32 +1,31 @@
-// Array of Temple Objects
 const temples = [
     {
         name: "Aba Nigeria",
         location: "Aba, Nigeria",
         dedicated: "2005, August, 7",
         area: 11500,
-        imageUrl: "images/aba-nigeria-temple.jpg"
+        imageUrl: "images/aba-nigeria.jpg"
     },
     {
         name: "Manti Utah",
         location: "Manti, Utah",
         dedicated: "1888, May, 21",
         area: 74700,
-        imageUrl: "images/manti-utah-temple.jpg"
+        imageUrl: "images/manti-utah.jpg"
     },
     {
         name: "Payson Utah",
         location: "Payson, Utah, United States",
         dedicated: "2015, June, 7",
         area: 96630,
-        imageUrl: "images/payson-utah-temple.jpg"
+        imageUrl: "images/payson-utah.jpg"
     },
     {
         name: "Yigo Guam",
         location: "Yigo, Guam",
         dedicated: "2020, August, 8",
         area: 6800,
-        imageUrl: "images/yigo-guam-temple.jpg"
+        imageUrl: "images/yigo-guam.jpg"
     },
     {
         name: "Salt Lake Temple",
@@ -86,7 +85,6 @@ const temples = [
     }
 ];
 
-// Function to create temple card HTML
 function createTempleCard(temple) {
     const card = document.createElement('figure');
     card.className = 'temple-card';
@@ -106,14 +104,12 @@ function createTempleCard(temple) {
             <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
         </figcaption>
     `;
-    
     return card;
 }
 
-// Function to display temples
 function displayTemples(templesToDisplay) {
     const container = document.getElementById('temples-container');
-    container.innerHTML = ''; // Clear existing content
+    container.innerHTML = ''; 
     
     templesToDisplay.forEach(temple => {
         const card = createTempleCard(temple);
@@ -121,48 +117,32 @@ function displayTemples(templesToDisplay) {
     });
 }
 
-// Function to filter temples
 function filterTemples(filterType) {
-    // Remove active class from all nav links
     document.querySelectorAll('nav a').forEach(link => {
         link.classList.remove('active');
     });
     
-    // Add active class to clicked link
-    event.target.classList.add('active');
+    if (event && event.target) {
+        event.target.classList.add('active');
+    }
     
     let filteredTemples = [];
     
     switch(filterType) {
         case 'old':
-            // Temples built before 1900
-            filteredTemples = temples.filter(temple => {
-                const year = parseInt(temple.dedicated.split(',')[0]);
-                return year < 1900;
-            });
+            filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(',')[0]) < 1900);
             break;
-            
         case 'new':
-            // Temples built after 2000
-            filteredTemples = temples.filter(temple => {
-                const year = parseInt(temple.dedicated.split(',')[0]);
-                return year > 2000;
-            });
+            filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(',')[0]) > 2000);
             break;
-            
         case 'large':
-            // Temples larger than 90,000 square feet
             filteredTemples = temples.filter(temple => temple.area > 90000);
             break;
-            
         case 'small':
-            // Temples smaller than 10,000 square feet
             filteredTemples = temples.filter(temple => temple.area < 10000);
             break;
-            
         case 'home':
         default:
-            // Display all temples
             filteredTemples = temples;
             break;
     }
@@ -170,48 +150,18 @@ function filterTemples(filterType) {
     displayTemples(filteredTemples);
 }
 
-// Function to set footer information
 function setFooterInfo() {
-    // Set current year
-    const currentYear = new Date().getFullYear();
-    document.getElementById('current-year').textContent = currentYear;
-    
-    // Set last modified date
-    const lastModified = document.lastModified;
-    document.getElementById('last-modified').textContent = lastModified;
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
 }
 
-// Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
-    // Set footer information
     setFooterInfo();
-    
-    // Display all temples initially
     displayTemples(temples);
     
-    // Add event listeners to navigation
-    document.getElementById('home').addEventListener('click', (e) => {
-        e.preventDefault();
-        filterTemples('home');
-    });
-    
-    document.getElementById('old').addEventListener('click', (e) => {
-        e.preventDefault();
-        filterTemples('old');
-    });
-    
-    document.getElementById('new').addEventListener('click', (e) => {
-        e.preventDefault();
-        filterTemples('new');
-    });
-    
-    document.getElementById('large').addEventListener('click', (e) => {
-        e.preventDefault();
-        filterTemples('large');
-    });
-    
-    document.getElementById('small').addEventListener('click', (e) => {
-        e.preventDefault();
-        filterTemples('small');
-    });
+    document.getElementById('home').addEventListener('click', (e) => { e.preventDefault(); filterTemples('home'); });
+    document.getElementById('old').addEventListener('click', (e) => { e.preventDefault(); filterTemples('old'); });
+    document.getElementById('new').addEventListener('click', (e) => { e.preventDefault(); filterTemples('new'); });
+    document.getElementById('large').addEventListener('click', (e) => { e.preventDefault(); filterTemples('large'); });
+    document.getElementById('small').addEventListener('click', (e) => { e.preventDefault(); filterTemples('small'); });
 });

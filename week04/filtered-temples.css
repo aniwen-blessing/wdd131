@@ -1,6 +1,4 @@
-/* =========================================
-   1. Reset and Base Styles
-   ========================================= */
+/* 1. Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,17 +7,15 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f5f7; /* Light gray background matching the screenshot */
-    color: #333;
+    background-color: #f4f5f7;
+    color: #333333;
     line-height: 1.6;
 }
 
-/* =========================================
-   2. Header and Navigation
-   ========================================= */
+/* 2. Header and Navigation */
 header {
-    background-color: #1a3b6e; /* Navy blue header */
-    color: white;
+    background-color: #1a3b6e;
+    color: #ffffff;
     padding: 1rem 2rem;
     text-align: center;
 }
@@ -38,10 +34,10 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 8px 16px;
-    border: 1px solid white;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     font-size: 0.9rem;
     transition: background-color 0.3s, color 0.3s;
@@ -49,13 +45,11 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    background-color: white;
+    background-color: #ffffff;
     color: #1a3b6e;
 }
 
-/* =========================================
-   3. Main Content and Grid Layout
-   ========================================= */
+/* 3. Main Content and Grid Layout */
 main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -64,18 +58,15 @@ main {
 
 .temples-grid {
     display: grid;
-    /* Creates a responsive grid that fits as many 300px cards as possible */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-/* =========================================
-   4. Temple Card Styling
-   ========================================= */
+/* 4. Temple Card Styling */
 .temple-card {
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -87,13 +78,12 @@ main {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Image styling to ensure uniform card heights */
 .temple-card img {
     width: 100%;
-    height: 250px; /* Fixed height so all cards look the same */
-    object-fit: cover; /* Crops the image nicely without stretching */
+    height: 250px;
+    object-fit: cover;
     display: block;
-    background-color: #e0e0e0; /* Placeholder color while loading */
+    background-color: #e0e0e0;
 }
 
 .temple-card figcaption {
@@ -103,11 +93,9 @@ main {
     flex-grow: 1;
 }
 
-/* =========================================
-   5. Typography inside Cards
-   ========================================= */
+/* 5. Typography inside Cards */
 .temple-card h2 {
-    color: #1a3b6e; /* Dark blue matching the screenshot */
+    color: #1a3b6e;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -116,20 +104,18 @@ main {
 .temple-card p {
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
-    color: #444;
+    color: #444444;
 }
 
 .temple-card strong {
-    color: #222;
+    color: #222222;
     font-weight: 600;
 }
 
-/* =========================================
-   6. Footer Styling
-   ========================================= */
+/* 6. Footer Styling */
 footer {
     background-color: #1a3b6e;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem;
     margin-top: 3rem;
@@ -140,9 +126,7 @@ footer p {
     margin: 0.25rem 0;
 }
 
-/* =========================================
-   7. Responsive Design (Mobile)
-   ========================================= */
+/* 7. Responsive Design (Mobile) */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -155,6 +139,6 @@ footer p {
     }
 
     .temples-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
     }
 }
