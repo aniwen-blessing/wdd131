@@ -101,7 +101,7 @@ legend em {
     justify-content: space-between;
     gap: 10px;
     margin-top: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* FIX 1: Changed from 'wrap' to 'nowrap' to keep row straight */
 }
 
 .star-option {
@@ -111,6 +111,7 @@ legend em {
     gap: 8px;
     flex: 1;
     min-width: 60px;
+    white-space: nowrap; /* FIX 2: Prevents "4 Stars" from breaking onto a new line */
 }
 
 .stars {
@@ -201,10 +202,9 @@ footer p {
 }
 
 #reviewCount {
-    color: #c05621; /* Slightly darker orange to ensure it passes Lighthouse contrast checks */
+    color: #c05621; 
 }
 
-/* Styles for the dynamically generated summary list */
 #confirmationDetails ul {
     list-style-type: none;
     margin-top: 15px;
