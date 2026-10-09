@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Digital Minds Coding Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="top-bar"><span>📧 blessinganiwen3@gmail.com | 📞 +234 706 994 6295</span><div><a href="#">Student Portal</a><a href="register.html">Apply Now</a></div></div>
+    <header>
+        <div class="logo">Digital<span>Minds</span></div>
+        <nav><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="mentorship.html">Mentorship</a></li><li><a href="register.html" class="active">Register</a></li></ul></nav>
+    </header>
+
+    <section class="page-banner"><h1>Join the Academy</h1><p class="breadcrumb"><a href="index.html">Home</a> / Register</p></section>
+
+    <main>
+        <section class="form-section">
+            <h2 class="section-title">Secure Your Spot</h2>
+            <p class="section-subtitle">Fill out the form below and we'll reach out to you shortly!</p>
+            <p id="draft-notice" class="notice" style="display: none;">Welcome back! Your previous draft has been restored.</p>
+            <form id="registration-form" action="https://formspree.io/f/mbddjred" method="POST">
+                <fieldset>
+                    <legend>Student Information</legend>
+                    <div class="form-group"><label for="fullName">Full Name:</label><input type="text" id="fullName" name="fullName" required></div>
+                    <div class="form-group"><label for="phone">Phone Number:</label><input type="tel" id="phone" name="phone" pattern="[0-9+\-\s()]{7,15}" placeholder="+234 700 000 0000" required></div>
+                    <div class="form-group"><label for="email">Email Address:</label><input type="email" id="email" name="email" required></div>
+                    <div class="form-group"><label for="courseInterest">Program of Interest:</label><select id="courseInterest" name="courseInterest" required><option value="">-- Select a Program --</option><option value="web-dev">Web Development</option><option value="python">Python Programming</option><option value="mentorship">Digital Mind Crews Mentorship</option></select></div>
+                    <div class="form-group"><label for="message">Why do you want to join? (Optional)</label><textarea id="message" name="message" rows="4"></textarea></div>
+                </fieldset>
+                <button type="submit" class="btn">Submit Registration</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-grid">
+            <div class="footer-col"><div class="logo" style="color: white; margin-bottom: 1rem;">Digital<span style="color: var(--accent-color);">Minds</span></div><p>Empowering students with practical tech skills.</p></div>
+            <div class="footer-col"><h3>Useful Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="mentorship.html">Mentorship</a></li><li><a href="terms.html">Terms</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
+            <div class="footer-col"><h3>Contact</h3><ul class="footer-contact"><li>📧 blessinganiwen3@gmail.com</li><li> +234 706 994 6295</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>Copyright &copy; 2026 Digital Minds.</p><p><a href="https://www.byui.edu/online/course-syllabi?course=WDD131">WDD 131 Reference</a></p></div>
+    </footer>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
